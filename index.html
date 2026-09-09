@@ -1,23 +1,356 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Hello</title>
-  <link rel="stylesheet" href="style.css">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Araceli Siedschlag</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-  <h1>Hello, world.</h1>
+<!-- top ribbon -->
+<div class="ribbon" aria-hidden="true">
+  <svg viewBox="0 0 400 26" preserveAspectRatio="none">
+    <path class="squiggle squiggle--wine" d="M0 8 Q 26 2 52 8 T 104 8 T 156 8 T 208 8 T 260 8 T 312 8 T 364 8 T 416 8"/>
+    <path class="squiggle squiggle--brown" d="M0 15 Q 26 9 52 15 T 104 15 T 156 15 T 208 15 T 260 15 T 312 15 T 364 15 T 416 15"/>
+    <path class="squiggle squiggle--gold" d="M0 22 Q 26 16 52 22 T 104 22 T 156 22 T 208 22 T 260 22 T 312 22 T 364 22 T 416 22"/>
+  </svg>
+</div>
 
-  <p>
-    This page is live. That is the only thing it is here to prove.
-  </p>
+<!-- masthead -->
+<header class="masthead">
+  <div class="masthead__inner">
+    <a href="#top" class="wordmark">Araceli Siedschlag</a>
 
-  <p>
-    Everything about it is yours to delete. Open Claude Code in this folder and
-    tell it what you actually want to build.
-  </p>
+    <button class="menu-toggle" aria-expanded="false" aria-controls="nav-list">Menu</button>
+
+    <nav class="nav" id="nav-list">
+      <a href="#professional" class="nav__item" data-nav="professional">
+        <span>Professional</span>
+        <svg class="nav__squiggle nav__squiggle--wine" viewBox="0 0 60 8" preserveAspectRatio="none" aria-hidden="true"><path d="M0 4 Q 8 0 16 4 T 32 4 T 48 4 T 64 4"/></svg>
+      </a>
+      <a href="#coursework" class="nav__item" data-nav="coursework">
+        <span>Coursework</span>
+        <svg class="nav__squiggle nav__squiggle--brown" viewBox="0 0 60 8" preserveAspectRatio="none" aria-hidden="true"><path d="M0 4 Q 8 0 16 4 T 32 4 T 48 4 T 64 4"/></svg>
+      </a>
+      <a href="#projects" class="nav__item" data-nav="projects">
+        <span>Projects</span>
+        <svg class="nav__squiggle nav__squiggle--gold" viewBox="0 0 60 8" preserveAspectRatio="none" aria-hidden="true"><path d="M0 4 Q 8 0 16 4 T 32 4 T 48 4 T 64 4"/></svg>
+      </a>
+      <a href="#personal" class="nav__item" data-nav="personal">
+        <span>Personal</span>
+        <svg class="nav__squiggle nav__squiggle--wine" viewBox="0 0 60 8" preserveAspectRatio="none" aria-hidden="true"><path d="M0 4 Q 8 0 16 4 T 32 4 T 48 4 T 64 4"/></svg>
+      </a>
+      <a href="Resume_Araceli_Siedschlag.pdf" class="resume-btn">Résumé</a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+
+  <!-- hero -->
+  <section class="hero">
+    <h1 class="hero__headline">Senior in computer science, <em>data science</em> by focus.</h1>
+    <p class="hero__subline">Two degrees at Colorado School of Mines · BS &rsquo;27 · MS &rsquo;27</p>
+    <p class="hero__body">
+      B.S. in Computer Science with a specialty in Data Science, expected May 2027, plus a combined
+      B.S./M.S. in Data Science, expected December 2027. I build models and pipelines that turn
+      messy data into decisions people can actually use.
+    </p>
+  </section>
+
+  <!-- 01 professional -->
+  <section id="professional" class="section professional reveal">
+    <div class="section__header">
+      <h2>Professional</h2>
+      <span class="section__num">01</span>
+    </div>
+    <p class="section__intro">Four years of IT, analytics and project work &mdash; while finishing two degrees.</p>
+
+    <ol class="timeline">
+      <li class="timeline__row">
+        <span class="timeline__dot timeline__dot--wine" aria-hidden="true"></span>
+        <div class="timeline__main">
+          <p class="timeline__title">Project Management Office</p>
+          <p class="timeline__employer">Colorado School of Mines</p>
+          <p class="timeline__desc">Supporting institutional project tracking, reporting, and process documentation across active initiatives.</p>
+        </div>
+        <span class="timeline__date">Dec 2025 &rarr; now</span>
+      </li>
+      <li class="timeline__row">
+        <span class="timeline__dot timeline__dot--brown" aria-hidden="true"></span>
+        <div class="timeline__main">
+          <p class="timeline__title">Student Manager &amp; Documentation Lead</p>
+          <p class="timeline__employer">Mines IT Service Desk</p>
+          <p class="timeline__desc">Manage a team of student technicians and own the internal knowledge base used for training and escalation.</p>
+        </div>
+        <span class="timeline__date">Oct 2024 &rarr; now</span>
+      </li>
+      <li class="timeline__row">
+        <span class="timeline__dot timeline__dot--gold" aria-hidden="true"></span>
+        <div class="timeline__main">
+          <p class="timeline__title">ESG Software Developer Intern</p>
+          <p class="timeline__employer">Janus Henderson Investors</p>
+          <p class="timeline__desc">Built internal tooling to collect and validate ESG datasets used in investment research workflows.</p>
+        </div>
+        <span class="timeline__date">Summer 2024</span>
+      </li>
+      <li class="timeline__row">
+        <span class="timeline__dot timeline__dot--wine" aria-hidden="true"></span>
+        <div class="timeline__main">
+          <p class="timeline__title">IT Service Desk Technician</p>
+          <p class="timeline__employer">Janus Henderson Investors</p>
+          <p class="timeline__desc">Provided tier-one and escalated technical support across a global financial services organization.</p>
+        </div>
+        <span class="timeline__date">2022 &rarr; 2023</span>
+      </li>
+      <li class="timeline__row">
+        <span class="timeline__dot timeline__dot--brown" aria-hidden="true"></span>
+        <div class="timeline__main">
+          <p class="timeline__title">Escalation Engineer Apprentice</p>
+          <p class="timeline__employer">Convercent</p>
+          <p class="timeline__desc">Triaged and resolved escalated customer issues for a SaaS compliance and ethics platform.</p>
+        </div>
+        <span class="timeline__date">Jul 2021 &rarr; Jul 2022</span>
+      </li>
+    </ol>
+  </section>
+
+  <!-- 02 education & coursework -->
+  <section id="coursework" class="section education reveal">
+    <div class="section__header">
+      <h2>Education &amp; coursework</h2>
+      <span class="section__num">02</span>
+    </div>
+
+    <div class="degree-cards">
+      <div class="degree-card degree-card--light">
+        <p class="degree-card__kicker">Bachelor of Science</p>
+        <h3 class="degree-card__name">Computer Science</h3>
+        <p class="degree-card__detail">Specialty in Data Science &middot; Colorado School of Mines</p>
+        <div class="degree-card__divider"></div>
+        <p class="degree-card__date">Expected May 2027</p>
+      </div>
+      <div class="degree-card degree-card--dark">
+        <p class="degree-card__kicker">Combined B.S./M.S.</p>
+        <h3 class="degree-card__name">Data Science</h3>
+        <p class="degree-card__detail">Accelerated combined degree &middot; Colorado School of Mines</p>
+        <div class="degree-card__divider"></div>
+        <p class="degree-card__date">Expected December 2027</p>
+      </div>
+    </div>
+
+    <div class="stat-strip stat-strip--three">
+      <div class="stat-strip__cell">
+        <p class="stat-strip__num">3.91</p>
+        <p class="stat-strip__caption">Cumulative GPA</p>
+      </div>
+      <div class="stat-strip__cell">
+        <p class="stat-strip__num">No. 1</p>
+        <p class="stat-strip__caption">National university in Colorado &mdash; U.S. News, 2026</p>
+      </div>
+      <div class="stat-strip__cell">
+        <p class="stat-strip__num">No. 1</p>
+        <p class="stat-strip__caption">In Colorado for computer science &mdash; Niche, 2026</p>
+      </div>
+    </div>
+
+    <div class="coursework-grid">
+      <div class="coursework-col">
+        <p class="coursework-col__label">Completed</p>
+        <ul class="course-list">
+          <li class="course-list__row"><span>Artificial Intelligence</span><span class="course-list__tag">CSCI</span></li>
+          <li class="course-list__row"><span>Advanced Data Science</span><span class="course-list__tag">DSCI</span></li>
+          <li class="course-list__row"><span>Software Engineering</span><span class="course-list__tag">CSCI</span></li>
+          <li class="course-list__row"><span>Databases</span><span class="course-list__tag">CSCI</span></li>
+          <li class="course-list__row"><span>Calculus I &ndash; III</span><span class="course-list__tag">MATH</span></li>
+          <li class="course-list__row"><span>Linear Algebra</span><span class="course-list__tag">MATH</span></li>
+          <li class="course-list__row"><span>Discrete Mathematics</span><span class="course-list__tag">MATH</span></li>
+          <li class="course-list__row"><span>Probability</span><span class="course-list__tag">MATH</span></li>
+          <li class="course-list__row"><span>Statistics</span><span class="course-list__tag">MATH</span></li>
+          <li class="course-list__row"><span>Statistical Modeling</span><span class="course-list__tag">MATH</span></li>
+          <li class="course-list__row"><span>Intro to Mathematical Statistics</span><span class="course-list__tag">MATH</span></li>
+        </ul>
+      </div>
+      <div class="coursework-col">
+        <p class="coursework-col__label">In progress &mdash; Fall 2026</p>
+        <ul class="course-list">
+          <li class="course-list__row"><span>Intro to Machine Learning</span><span class="course-list__tag">DSCI 570</span></li>
+          <li class="course-list__row"><span>Advanced Statistical Modeling</span><span class="course-list__tag">MATH 536</span></li>
+          <li class="course-list__row"><span>Programming Languages</span><span class="course-list__tag">CSCI 400</span></li>
+          <li class="course-list__row"><span>Coding with AI</span><span class="course-list__tag">CSCI 498E</span></li>
+        </ul>
+      </div>
+      <div class="coursework-col coursework-col--use">
+        <p class="coursework-col__label">What I use it for</p>
+        <div class="pill-set">
+          <span class="pill">Modeling</span>
+          <span class="pill">Pipelines</span>
+          <span class="pill">Analytics</span>
+          <span class="pill">Reporting</span>
+        </div>
+        <div class="note-card">
+          <p>On the housing model the interesting work was not the code &mdash; it was choosing between a
+          neural net, a random forest and plain regression, and defending the tradeoff with the statistics.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 03 projects -->
+  <section id="projects" class="section projects reveal">
+    <div class="section__header">
+      <h2>Projects</h2>
+      <span class="section__num">03</span>
+    </div>
+    <p class="section__intro">Applied data science work, from coursework to independent builds.</p>
+
+    <div class="project-rows">
+      <div class="project-row">
+        <div class="project-row__text">
+          <p class="project-row__kicker">Predictive modeling</p>
+          <h3 class="project-row__title">Predictive Housing Investment Model</h3>
+          <p class="project-row__desc">Developed and validated a predictive machine learning model for housing investment strategy, using artificial neural networks, random forest, and linear regression on integrated climate, housing, and demographic datasets to forecast market trends and recommend optimal investment locations.</p>
+        </div>
+        <div class="project-row__image" data-slot="project-1" aria-hidden="true"></div>
+      </div>
+      <div class="project-row">
+        <div class="project-row__text">
+          <p class="project-row__kicker">Team dashboard &middot; Scrum Master</p>
+          <h3 class="project-row__title">City of Idaho Springs Economic Impacts Dashboard</h3>
+          <p class="project-row__desc">Partnered with the City of Idaho Springs and a team of five to build a multi-source economic impact dashboard in Power BI; served as Scrum Master, contributed to data ingestion and modeling, and authored technical reports consumed by city departments and external stakeholders.</p>
+        </div>
+        <div class="project-row__image" data-slot="project-2" aria-hidden="true"></div>
+      </div>
+      <div class="project-row">
+        <div class="project-row__text">
+          <p class="project-row__kicker">Software engineering</p>
+          <h3 class="project-row__title">Clue Digital Simulation</h3>
+          <p class="project-row__desc">Engineered a functional digital simulation of the classic game Clue in Java, using JIRA for agile project management to track sprints, manage the feature backlog, and resolve development issues within a structured, iterative workflow.</p>
+        </div>
+        <div class="project-row__image" data-slot="project-3" aria-hidden="true"></div>
+      </div>
+    </div>
+
+    <div class="skill-pills">
+      <span class="skill-pill">Python</span>
+      <span class="skill-pill">R</span>
+      <span class="skill-pill">SQL</span>
+      <span class="skill-pill">Machine Learning</span>
+      <span class="skill-pill">Neural Networks</span>
+      <span class="skill-pill">Scikit-learn</span>
+      <span class="skill-pill">Statistical Modeling</span>
+      <span class="skill-pill">Power BI</span>
+      <span class="skill-pill">Snowflake</span>
+      <span class="skill-pill">Azure Logs</span>
+      <span class="skill-pill">Java</span>
+      <span class="skill-pill">C++</span>
+      <span class="skill-pill">C#</span>
+      <span class="skill-pill">Git</span>
+      <span class="skill-pill">Agile/Scrum</span>
+    </div>
+  </section>
+
+  <!-- 04 personal -->
+  <section id="personal" class="section personal reveal">
+    <div class="section__header">
+      <h2>Personal</h2>
+      <span class="section__num">04</span>
+    </div>
+    <p class="section__intro">
+      Outside of coursework and analytics, I spend my time outdoors around Colorado, cooking, and
+      volunteering with campus IT and mentoring programs.
+    </p>
+    <div class="photo-grid">
+      <div class="photo-slot" data-slot="personal-1" aria-hidden="true"></div>
+      <div class="photo-slot" data-slot="personal-2" aria-hidden="true"></div>
+      <div class="photo-slot" data-slot="personal-3" aria-hidden="true"></div>
+      <div class="photo-slot" data-slot="personal-4" aria-hidden="true"></div>
+    </div>
+  </section>
+
+  <!-- closing cta -->
+  <section class="cta reveal">
+    <h2 class="cta__line">Looking for summer 2027 data science work.</h2>
+    <div class="cta__actions">
+      <a href="mailto:aasiedschlag@mines.edu" class="cta__pill cta__pill--solid">aasiedschlag@mines.edu</a>
+      <a href="Resume_Araceli_Siedschlag.pdf" class="cta__pill cta__pill--outline">Download r&eacute;sum&eacute;</a>
+    </div>
+  </section>
+
+</main>
+
+<!-- footer -->
+<footer class="footer">
+  <div class="footer__inner">
+    <div class="footer__left">
+      <span>Golden, Colorado</span>
+      <span>&middot;</span>
+      <span>Available on request</span>
+    </div>
+    <div class="footer__right">
+      <a href="https://github.com/AraceliSiedschlag" target="_blank" rel="noopener">GitHub</a>
+      <a href="https://www.linkedin.com" target="_blank" rel="noopener">LinkedIn</a>
+    </div>
+  </div>
+  <div class="ribbon ribbon--footer" aria-hidden="true">
+    <svg viewBox="0 0 400 26" preserveAspectRatio="none">
+      <path class="squiggle squiggle--wine" d="M0 8 Q 26 2 52 8 T 104 8 T 156 8 T 208 8 T 260 8 T 312 8 T 364 8 T 416 8"/>
+      <path class="squiggle squiggle--brown" d="M0 15 Q 26 9 52 15 T 104 15 T 156 15 T 208 15 T 260 15 T 312 15 T 364 15 T 416 15"/>
+      <path class="squiggle squiggle--gold" d="M0 22 Q 26 16 52 22 T 104 22 T 156 22 T 208 22 T 260 22 T 312 22 T 364 22 T 416 22"/>
+    </svg>
+  </div>
+</footer>
+
+<script>
+(function () {
+  var menuToggle = document.querySelector('.menu-toggle');
+  var nav = document.getElementById('nav-list');
+
+  menuToggle.addEventListener('click', function () {
+    var open = nav.classList.toggle('nav--open');
+    menuToggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+  });
+
+  nav.querySelectorAll('.nav__item').forEach(function (link) {
+    link.addEventListener('click', function () {
+      nav.classList.remove('nav--open');
+      menuToggle.setAttribute('aria-expanded', 'false');
+    });
+  });
+
+  var sections = Array.prototype.slice.call(document.querySelectorAll('main .section'));
+  var navLinks = Array.prototype.slice.call(document.querySelectorAll('.nav__item'));
+
+  var sectionObserver = new IntersectionObserver(function (entries) {
+    entries.forEach(function (entry) {
+      var link = document.querySelector('.nav__item[data-nav="' + entry.target.id + '"]');
+      if (!link) return;
+      if (entry.isIntersecting) {
+        navLinks.forEach(function (l) { l.classList.remove('nav__item--active'); });
+        link.classList.add('nav__item--active');
+      }
+    });
+  }, { rootMargin: '-40% 0px -50% 0px', threshold: 0 });
+
+  sections.forEach(function (s) { sectionObserver.observe(s); });
+
+  var revealTargets = document.querySelectorAll('.reveal');
+  var revealObserver = new IntersectionObserver(function (entries, obs) {
+    entries.forEach(function (entry) {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('reveal--visible');
+        obs.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.12 });
+
+  revealTargets.forEach(function (t) { revealObserver.observe(t); });
+})();
+</script>
 
 </body>
 </html>

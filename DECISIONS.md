@@ -15,6 +15,7 @@ What you wanted at the start, and what is actually live now.
 Name one thing you dropped or added along the way, and why.
 
 *Your answer here.*
+I am setting out to build a personal webite that has three sections a professional, projects, and personal. Then I would like the color theme to be pink, blue, and gold. I want it to contain my resume and a small section about myself. 
 
 ---
 
@@ -27,6 +28,9 @@ What goes on the front page and what does not.
 Say which you picked, what the alternative was, and what you gave up by not taking it.
 
 "There was no alternative" is not an answer. Find the fork.
+
+one page vs multiple required me to change tabs, menue, and other stuff
+
 
 *Your answer here.*
 
@@ -43,6 +47,7 @@ check in order to notice. Being honest here costs you far less than a story you 
 defend when you record your video.
 
 *Your answer here.*
+It wanted to do three random giant circles, changed the orgder things, add a school page, removed random stats
 
 ---
 
