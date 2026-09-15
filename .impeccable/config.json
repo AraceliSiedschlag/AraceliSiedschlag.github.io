@@ -1,0 +1,35 @@
+{
+  "detector": {
+    "ignoreRules": [],
+    "ignoreFiles": [],
+    "ignoreValues": [
+      {
+        "rule": "tiny-text",
+        "value": "*",
+        "files": [
+          "/Users/aracelisiedschlag/Documents/Fall27/CodingWithAi/AraceliSiedschlag.github.io/index.html"
+        ],
+        "createdAt": "2026-09-15T18:05:30.265Z",
+        "reason": "hero__footnote is the site's documented 10.5px Label role (stat footnote, non-interactive), not misapplied body text (re-established after cwd resolution changed)"
+      },
+      {
+        "rule": "wide-tracking",
+        "value": "*",
+        "files": [
+          "/Users/aracelisiedschlag/Documents/Fall27/CodingWithAi/AraceliSiedschlag.github.io/index.html"
+        ],
+        "createdAt": "2026-09-15T18:05:30.282Z",
+        "reason": "all 0.08em tracking in this file is on the documented uppercase Label role, not running body prose (re-established after cwd resolution changed)"
+      },
+      {
+        "rule": "overused-font",
+        "value": "roboto",
+        "files": [
+          "/Users/aracelisiedschlag/Documents/Fall27/CodingWithAi/AraceliSiedschlag.github.io/index.html"
+        ],
+        "createdAt": "2026-09-15T18:05:30.298Z",
+        "reason": "user confirmed: explicitly requested Roboto by name for several scoped roles this session (re-established after cwd resolution changed)"
+      }
+    ]
+  }
+}

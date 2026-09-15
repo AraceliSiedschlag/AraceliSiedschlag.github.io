@@ -1,0 +1,165 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-09-15T17:47:58Z",
+  "title": "Design System: Araceli Siedschlag — Personal Site",
+  "extensions": {
+    "colorMeta": {
+      "signal-blue": {
+        "role": "primary",
+        "displayName": "Signal Blue",
+        "canonical": "#0066cc",
+        "tonalRamp": ["#001a33", "#003366", "#004d99", "#0066cc", "#3385d6", "#66a3e0", "#99c2eb", "#cce0f5"]
+      },
+      "ink": {
+        "role": "neutral",
+        "displayName": "Ink",
+        "canonical": "#0a0a0a",
+        "tonalRamp": ["#0a0a0a", "#1f1f1f", "#333333", "#4d4d4d", "#666666", "#999999", "#cccccc", "#f0f0f0"]
+      },
+      "body-text": {
+        "role": "neutral",
+        "displayName": "Body",
+        "canonical": "#2e2e2e",
+        "tonalRamp": ["#141414", "#2e2e2e", "#454545", "#5c5c5c", "#737373", "#8a8a8a", "#b3b3b3", "#e0e0e0"]
+      },
+      "muted": {
+        "role": "neutral",
+        "displayName": "Muted",
+        "canonical": "#6b6b6b",
+        "tonalRamp": ["#2b2b2b", "#404040", "#565656", "#6b6b6b", "#828282", "#9c9c9c", "#c2c2c2", "#e5e5e5"]
+      },
+      "off-white": {
+        "role": "neutral",
+        "displayName": "Off-White",
+        "canonical": "#f4f4f4",
+        "tonalRamp": ["#c9c9c9", "#d6d6d6", "#e3e3e3", "#ececec", "#f4f4f4", "#f8f8f8", "#fbfbfb", "#fefefe"]
+      },
+      "paper": {
+        "role": "neutral",
+        "displayName": "Paper",
+        "canonical": "#ffffff",
+        "tonalRamp": ["#d9d9d9", "#e6e6e6", "#f0f0f0", "#f7f7f7", "#ffffff", "#ffffff", "#ffffff", "#ffffff"]
+      },
+      "blue-tint": {
+        "role": "neutral",
+        "displayName": "Blue-Tint",
+        "canonical": "#e0f0fa",
+        "tonalRamp": ["#0066cc", "#3385d6", "#66a3e0", "#99c2eb", "#cce0f5", "#e0f0fa", "#eff8fc", "#ffffff"]
+      }
+    },
+    "typographyMeta": {
+      "display": { "displayName": "Display", "purpose": "Hero headline only. IBM Plex Sans 700 — the display voice." },
+      "headline": { "displayName": "Headline", "purpose": "Section titles (Professional, Projects, etc.). IBM Plex Sans 700." },
+      "wordmark": { "displayName": "Wordmark", "purpose": "Masthead site name only. JetBrains Mono — the system's one remaining mono use." },
+      "title": { "displayName": "Title", "purpose": "Row-level titles in timelines and project rows, always Signal Blue. Roboto — one of two scoped exceptions to the mono default." },
+      "body": { "displayName": "Body", "purpose": "Running prose in hero body, section intros, and descriptions. JetBrains Mono." },
+      "label": { "displayName": "Label", "purpose": "Uppercase letter-spaced metadata: dates, tags, kickers, nav items, footer. JetBrains Mono." }
+    },
+    "shadows": [],
+    "motion": [
+      { "name": "reveal-ease", "value": "opacity 0.6s ease, transform 0.6s ease", "purpose": "Section content fades and rises 16px into place on scroll into view." },
+      { "name": "focus-ring", "value": "outline: 2px solid #0066cc; outline-offset: 2px", "purpose": "Keyboard focus indicator on all interactive elements." }
+    ],
+    "breakpoints": [
+      { "name": "mobile", "value": "860px" }
+    ]
+  },
+  "components": [
+    {
+      "name": "Primary Button (Résumé)",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "Ink-filled uppercase mono button used for the résumé link in the masthead.",
+      "html": "<a class=\"ds-btn-primary\" href=\"#\">Résumé</a>",
+      "css": ".ds-btn-primary { font-family: 'JetBrains Mono', 'SFMono-Regular', Menlo, monospace; font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase; text-decoration: none; background: #0a0a0a; color: #fff; padding: 10px 18px; display: inline-block; } .ds-btn-primary:hover { background: #0066cc; } .ds-btn-primary:focus-visible { outline: 2px solid #0066cc; outline-offset: 2px; }"
+    },
+    {
+      "name": "Solid Accent Pill (Email CTA)",
+      "kind": "button",
+      "refersTo": "button-accent-solid",
+      "description": "Signal Blue filled pill used for the closing CTA's primary email action.",
+      "html": "<a class=\"ds-pill-solid\" href=\"#\">aasiedschlag@mines.edu</a>",
+      "css": ".ds-pill-solid { font-family: 'JetBrains Mono', 'SFMono-Regular', Menlo, monospace; font-size: 12px; letter-spacing: 0.08em; text-decoration: none; border-radius: 0; padding: 14px 26px; background: #0066cc; color: #fff; display: inline-block; } .ds-pill-solid:focus-visible { outline: 2px solid #0a0a0a; outline-offset: 2px; }"
+    },
+    {
+      "name": "Outline Pill (Résumé Download CTA)",
+      "kind": "button",
+      "refersTo": "button-secondary",
+      "description": "Ink-bordered outline pill used for the secondary CTA action.",
+      "html": "<a class=\"ds-pill-outline\" href=\"#\">Download résumé</a>",
+      "css": ".ds-pill-outline { font-family: 'JetBrains Mono', 'SFMono-Regular', Menlo, monospace; font-size: 12px; letter-spacing: 0.08em; text-decoration: none; border-radius: 0; padding: 14px 26px; border: 1px solid #0a0a0a; color: #0a0a0a; display: inline-block; } .ds-pill-outline:hover { color: #0066cc; border-color: #0066cc; } .ds-pill-outline:focus-visible { outline: 2px solid #0066cc; outline-offset: 2px; }"
+    },
+    {
+      "name": "Skill/Tag Pill",
+      "kind": "chip",
+      "refersTo": "pill",
+      "description": "Neutral outlined tag used for skills and course-use pills; never accent-colored. Inverts to a solid ink 'stamp' fill on hover.",
+      "html": "<span class=\"ds-pill\">Python</span>",
+      "css": ".ds-pill { font-family: 'JetBrains Mono', 'SFMono-Regular', Menlo, monospace; font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase; border: 1px solid #0a0a0a; border-radius: 0; padding: 6px 12px; color: #0a0a0a; display: inline-block; transition: background 0.12s ease, color 0.12s ease; } .ds-pill:hover { background: #0a0a0a; color: #fff; }"
+    },
+    {
+      "name": "List Row (Timeline / Project)",
+      "kind": "custom",
+      "refersTo": null,
+      "description": "Signature record pattern: a square dot, a Signal Blue title, a muted secondary line, and a regular-weight description, separated by a hairline rule. Title and description are set in Roboto; the dot, sub-label, and structural elements stay mono. On hover the rule darkens to ink and the dot fills Signal Blue.",
+      "html": "<div class=\"ds-row\"><span class=\"ds-row-dot\"></span><div class=\"ds-row-main\"><p class=\"ds-row-title\">Role Title</p><p class=\"ds-row-sub\">Employer / Kicker</p><p class=\"ds-row-desc\">Description text goes here.</p></div></div>",
+      "css": ".ds-row { display: flex; align-items: flex-start; gap: 16px; padding: 22px 0; border-top: 1px solid #d9d9d9; font-family: 'JetBrains Mono', 'SFMono-Regular', Menlo, monospace; transition: border-top-color 0.15s ease; } .ds-row:hover { border-top-color: #0a0a0a; } .ds-row:hover .ds-row-dot { background: #0066cc; } .ds-row-dot { width: 8px; height: 8px; margin-top: 7px; flex-shrink: 0; background: #0a0a0a; transition: background 0.15s ease; } .ds-row-main { flex: 1; min-width: 0; } .ds-row-title { font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif; font-size: 17px; font-weight: 600; line-height: 1.1; color: #0066cc; margin: 0 0 3px; } .ds-row-sub { font-size: 13px; font-weight: 500; color: #6b6b6b; margin: 0 0 8px; } .ds-row-desc { font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif; font-size: 13px; font-weight: 400; color: #2e2e2e; margin: 0; }"
+    },
+    {
+      "name": "Degree Banner",
+      "kind": "custom",
+      "refersTo": null,
+      "description": "Two degree entries (B.S. in Computer Science, M.S. in Data Science) sharing one ruled band filled solid Signal Blue instead of two boxed cards, divided by a thin translucent-white rule (horizontal on mobile).",
+      "html": "<div class=\"ds-banner\"><div class=\"ds-banner-item\"><h3 class=\"ds-banner-name\">B.S. in Computer Science</h3><p class=\"ds-banner-detail\">Specialty in Data Science &middot; Colorado School of Mines</p><p class=\"ds-banner-date\">Expected May 2027</p></div><div class=\"ds-banner-divider\"></div><div class=\"ds-banner-item\"><h3 class=\"ds-banner-name\">M.S. in Data Science</h3><p class=\"ds-banner-detail\">Colorado School of Mines</p><p class=\"ds-banner-date\">Expected December 2027</p></div></div>",
+      "css": ".ds-banner { display: flex; align-items: stretch; background: #0066cc; border-top: 1px solid #0a0a0a; border-bottom: 1px solid #0a0a0a; } .ds-banner-item { flex: 1; min-width: 0; padding: 28px 32px; } .ds-banner-divider { width: 1px; flex-shrink: 0; background: rgba(255,255,255,0.35); } .ds-banner-name { font-family: 'IBM Plex Sans', 'Helvetica Neue', Arial, sans-serif; font-size: 22px; font-weight: 700; margin: 0 0 8px; color: #fff; } .ds-banner-detail { font-family: 'JetBrains Mono', 'SFMono-Regular', Menlo, monospace; font-size: 13px; color: #e0f0fa; margin: 0 0 16px; } .ds-banner-date { font-family: 'JetBrains Mono', 'SFMono-Regular', Menlo, monospace; font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase; color: #fff; margin: 0; }"
+    },
+    {
+      "name": "Image Placeholder",
+      "kind": "custom",
+      "refersTo": null,
+      "description": "The system's one repeated pattern for a real photo that doesn't exist yet: off-white fill, 1px ink border, zero radius, a centered uppercase label. Used identically for the Personal section's four photo slots and the hero headshot.",
+      "html": "<div class=\"ds-img-placeholder\"><span class=\"ds-img-placeholder-label\">Headshot &ndash; Pending</span></div>",
+      "css": ".ds-img-placeholder { background: #f4f4f4; border: 1px solid #0a0a0a; border-radius: 0; display: flex; align-items: center; justify-content: center; padding: 8px; text-align: center; } .ds-img-placeholder-label { font-family: 'JetBrains Mono', 'SFMono-Regular', Menlo, monospace; font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase; color: #6b6b6b; }"
+    }
+  ],
+  "narrative": {
+    "northStar": "The Systems Ledger",
+    "overview": "This is a personal record built like an engineering ledger, not a marketing page: numbered entries, ruled lines, tabular facts. The system is deliberately flat: zero border-radius anywhere, thin 1px rules instead of shadows or cards-with-elevation, and a strict ink/off-white/paper neutral base that lets a single accent, Signal Blue, mark exactly what deserves attention (an active nav item, a role title, the solid-fill degree banner, the closing CTA).\n\nTypography is JetBrains Mono by default — the hero headline, section headers, most section-intro prose, labels, tags, dates, the wordmark, the closing CTA line. IBM Plex Sans is one contained exception: the two degree-banner names, nowhere else. Roboto is the other, and its footprint has grown by individual request: the Professional/Projects row titles and descriptions (the page's longest continuous reading content), and the Personal section's intro paragraph. Everything structural around those Roboto spots (the dot, dates, employer line) stays mono.\n\nThe visual language leans on structure rather than embellishment: a three-line ribbon motif top and bottom, 01–04 section numbering in Signal Blue, hairline dividers between every list row, and uppercase letter-spaced labels for every piece of metadata (dates, tags, kickers). Degrees run as one ruled banner filled solid Signal Blue rather than two boxed cards. Nothing in the system uses gradients, drop shadows, rounded corners, or a fourth typeface — those would all read as decoration in a system whose entire identity is 'this is a ledger, not a brochure.'",
+    "keyCharacteristics": [
+      "Flat, ruled, ledger-like structure; hairline rules do the work shadows would do elsewhere.",
+      "One accent (Signal Blue) used sparingly against a strict ink/off-white/paper neutral base.",
+      "Mono-first typography: JetBrains Mono runs the whole page, headlines included, with IBM Plex Sans sprinkled in exactly one place, the degree-banner names.",
+      "Numbered, uppercase, letter-spaced labels for all metadata and section markers.",
+      "Zero border-radius; every shape is a rectangle.",
+      "Interaction is tactile and in-voice: rows highlight their own rule + dot on hover, tags invert to a stamped ink fill.",
+      "Degrees run as one ruled banner filled solid Signal Blue rather than two boxed cards."
+    ],
+    "rules": [
+      { "name": "The One-Signal Rule", "body": "Signal Blue is the only color that can carry meaning or emphasis. Every other color in the system is neutral (ink, body, muted, off-white, paper); if something needs to stand out, it turns blue — it never gets a new color.", "section": "colors" },
+      { "name": "The Two-Exceptions Rule", "body": "JetBrains Mono is the page's typeface by default — headlines, labels, wordmark, CTA, most intro prose. Exactly two exceptions break from it, each scoped and expanding only by explicit request: IBM Plex Sans on the degree-banner names, and Roboto on reading-heavy content (currently the Professional/Projects row titles-and-descriptions and the Personal section's intro). Each Roboto addition has been a deliberate, individually-requested carve-out, not a standing rule the system applies on its own judgment.", "section": "typography" },
+      { "name": "The Flat-By-Default Rule", "body": "No surface ever lifts on shadow. Separation between elements comes from a hairline rule or a flat background-color shift — never from elevation.", "section": "elevation" },
+      { "name": "The Equivalent-Columns Rule", "body": "Only put content in side-by-side equal-width columns when it's genuinely the same kind of content. A list and a short qualitative note are not columns of the same row — the note gets its own full-width band instead.", "section": "layout" }
+    ],
+    "dos": [
+      "Do keep JetBrains Mono as the page's default typeface, and confine the two exceptions to their scoped roles: IBM Plex Sans on degree-banner names, Roboto on the Professional/Projects row titles-and-descriptions and the Personal intro — see the Two-Exceptions Rule. Never expand either without an explicit decision.",
+      "Do reserve Signal Blue for emphasis and action only — role/project titles, active nav, the degree banner (its one large-surface use), solid CTAs.",
+      "Do use hairline rules as the only separation device between stacked records; don't reach for shadow or elevation instead.",
+      "Do keep every corner square (border-radius: 0) on every component, including pills and image placeholders.",
+      "Do set metadata (dates, tags, kickers, nav labels) in uppercase mono with 0.08–0.12em letter-spacing, 11px minimum — nothing content-bearing goes below 11px.",
+      "Do give every link, button, and pill a hover state (Signal Blue or ink, matching its default treatment) — a control that only reacts on click reads as unfinished.",
+      "Do ground interactive moments in the ledger's own vocabulary — a row's rule and dot responding on hover, a pill inverting to a stamped ink fill — never a generic card-lift, glow, or scale transform.",
+      "Do distinguish active/inactive/hover nav and text states by color and weight, never by opacity alone — opacity dimming compounds with an already-midtone gray and fails contrast.",
+      "Do respect prefers-reduced-motion on the scroll-reveal transition."
+    ],
+    "donts": [
+      "Don't add a second accent color; if something new needs emphasis, it uses Signal Blue or it stays neutral.",
+      "Don't add drop shadows, gradients, or rounded corners anywhere — they contradict the flat ledger metaphor.",
+      "Don't introduce a fourth typeface, use IBM Plex Sans anywhere except the degree-banner names, or add Roboto to a new role without being explicitly asked — the mono-default-with-two-exceptions split is the system's current core identity, and Roboto's footprint has grown by individual request each time, not by a standing rule.",
+      "Don't fill the empty photo-slot or hero-headshot placeholders with stock imagery or invented content — leave them as honest off-white placeholders, labeled in-voice, until real photos exist.",
+      "Don't put a kicker/eyebrow label above a heading; fold the qualifying detail into the heading text itself instead.",
+      "Don't bold supporting/description copy as heavily as the title it supports; descriptions stay at regular weight in Body color so the Signal Blue title still leads.",
+      "Don't reach for a generic 'AI portfolio' interaction (card hover-lift, glow, gradient shimmer, bounce) — every interactive moment must trace back to something already in the ledger's own visual vocabulary.",
+      "Don't box the degree entries back into separate bordered cards; the banner (one ruled band, one internal divider) is the current form."
+    ]
+  }
+}
