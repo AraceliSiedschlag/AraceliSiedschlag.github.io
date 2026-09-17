@@ -29,6 +29,15 @@
         ],
         "createdAt": "2026-09-15T18:05:30.298Z",
         "reason": "user confirmed: explicitly requested Roboto by name for several scoped roles this session (re-established after cwd resolution changed)"
+      },
+      {
+        "rule": "cramped-padding",
+        "value": "*",
+        "files": [
+          "/Users/aracelisiedschlag/Documents/Fall27/CodingWithAi/AraceliSiedschlag.github.io/index.html"
+        ],
+        "createdAt": "2026-09-17T02:09:10.818Z",
+        "reason": "false positive: .nav__contact-dropdown has padding:14px 18px with a border on desktop, and padding:0 with border:none + background:transparent on mobile (separate media-query rules) - detector appears to conflate the two non-overlapping states as one"
       }
     ]
   }
