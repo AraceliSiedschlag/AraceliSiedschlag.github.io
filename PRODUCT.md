@@ -29,7 +29,7 @@ A two-degree computer science / data science student (BS + combined BS/MS at Col
 
 - Plain HTML/CSS build (no framework, no build step); JetBrains Mono via Google Fonts.
 - Single-page site with in-page navigation to four sections — Professional, Coursework/Education, Projects, Personal — plus a downloadable résumé PDF and an email/résumé closing call-to-action.
-- Personal section currently has empty photo placeholder slots pending real photos.
+- Hero shows a real headshot (left column) beside the intro text; the Personal section shows five real photos in its grid. No placeholders currently active on the page.
 - No required page count, framework, or section list was imposed by the assignment; content and structure are Araceli's choice.
 
 ## Evidence on Hand
@@ -38,7 +38,7 @@ A two-degree computer science / data science student (BS + combined BS/MS at Col
 - Real professional history (Mines PMO, Mines IT Service Desk, Janus Henderson Investors x2, Convercent) and real coursework/degree facts, already written into the current `index.html`.
 - Three real project write-ups (Predictive Housing Investment Model, City of Idaho Springs Economic Impacts Dashboard, Clue Digital Simulation).
 - Contact: aasiedschlag@mines.edu; GitHub: github.com/AraceliSiedschlag; LinkedIn: linkedin.com/in/araceli-siedschlag.
-- No personal photos yet on hand for the Personal section's photo grid (four placeholder slots, unfilled), and no headshot yet for the hero placeholder either.
+- Photos on hand and in use: `images/headshot.jpg` (hero), `images/family.jpg`, `images/goat-yoga.jpg`, `images/me.jpg`, `images/butter-1.jpg`, `images/butter-2.jpg` (Personal grid). Optimized JPEGs converted from the originals (some HEIC) the user supplied; raw originals kept locally in a git-ignored `originals/` folder, not part of the deployed site.
 
 ## Product Principles
 

@@ -158,7 +158,7 @@ A near-monochrome ledger palette (ink, off-white, paper) with exactly one accent
 - **Ink** (#0a0a0a): Primary text color for headings, body emphasis, and structural elements (rules, borders, dot markers, primary buttons' background).
 - **Body** (#2e2e2e): Running body copy color, one step softer than pure ink.
 - **Muted** (#6b6b6b): Secondary/metadata text — employer names, timestamps, footer copy, inactive nav labels.
-- **Off-White** (#f4f4f4): Section-level background fill (the Education section) and empty image placeholders (the Personal photo slots, the hero headshot).
+- **Off-White** (#f4f4f4): Section-level background fill (the Education section) and the fallback surface behind photo slots (the Personal grid, the hero headshot) — shows through only when a slot's image is missing or still loading.
 - **Paper** (#ffffff): The page background and the mobile nav panel surface.
 - **Blue-Tint** (#e0f0fa): Secondary text specifically on the Signal Blue degree-banner surface — a hue-tinted light blue rather than plain gray, so muted text stays legible and on-hue against a colored background (4.78:1 contrast, verified). Not used anywhere off that surface.
 
@@ -195,7 +195,7 @@ A near-monochrome ledger palette (ink, off-white, paper) with exactly one accent
 
 ## Layout
 
-A single centered column system: most sections cap at `max-width: 1040px` (the hero and closing CTA narrow further, to 760px and 720px, for a tighter reading measure), centered with `margin: 0 auto` and 24px horizontal padding on desktop (20px on mobile). Section rhythm is generous and consistent — 80px vertical padding per section (56px on mobile at the ≤860px breakpoint), each section opening with a full-width top rule. Below 860px, the top nav collapses into a toggled full-width panel, the hero headline drops from 48px to 32px, the degree banner stacks to a single column with its divider rotating to horizontal, and the four-photo grid becomes a 2×2 grid. Density is even and generous — this is a resting, non-cramped ledger, not a compressed data table.
+A single centered column system for most sections (`max-width: 1040px`, `margin: 0 auto`, 24px horizontal padding on desktop / 20px on mobile), with two deliberate exceptions: the hero and the closing CTA narrow to 760px/720px for a tighter reading measure, and the hero itself is two-column, not stacked — a 340px photo on the left, the headline, subline, and a contact pill filling the remaining width on the right, vertically centered. Section rhythm is generous and consistent — 80px vertical padding per section (56px on mobile at the ≤860px breakpoint), each section opening with a full-width top rule. Below 860px, the top nav collapses into a toggled full-width panel, the hero switches from a row to a stacked column (photo on top, capped at 220px wide, text below), the degree banner stacks to a single column with its divider rotating to horizontal, and the five-photo Personal grid drops from 5 columns to 2. Density is even and generous — this is a resting, non-cramped ledger, not a compressed data table.
 
 Coursework is a two-part structure, not a single grid: the two course lists ("Completed", "In progress") sit in a 2-column grid because they're the same kind of content at different lengths, while "What I use it for" (a short reflective note, not a list) runs as its own full-width row beneath, separated by a hairline rule, with a fixed-width label column beside the note card. Grouping equal-height list columns together and giving the qualitative aside its own horizontal band avoids the empty-space problem of forcing three unequal content types into one equal-height grid row.
 
@@ -222,6 +222,7 @@ Every interactive and static component shares the same terse, utilitarian charac
 - **Primary (resume button):** Ink background (#0a0a0a), white text, 10px/18px padding, uppercase 11px label type with 0.12em letter-spacing.
 - **Secondary/Outline (CTA "Download resume"):** Transparent/paper background, 1px ink border, ink text, 14px/26px padding.
 - **Solid accent (CTA email pill):** Signal Blue background, white text — the one button variant that uses the accent as a fill rather than a border.
+- **Hero contact pill:** Reuses the CTA's outline pill classes directly (`cta__pill cta__pill--outline`) rather than a new component — same `mailto:` action, same visual language, just surfaced where a visitor lands first instead of only at the very bottom of the page.
 
 ### Chips / Pills
 - **Style:** Paper background, 1px ink border, ink text, uppercase 11px label type, 0.1–0.12em letter-spacing, 6–7px/12–14px padding.
@@ -237,6 +238,8 @@ Every interactive and static component shares the same terse, utilitarian charac
 
 ### Navigation
 - **Style:** Uppercase 11px mono labels, 0.12em letter-spacing, Muted-gray by default. The active section's label goes ink with a thickened (3px) Signal Blue underline; inactive items keep a thin 2px muted-gray underline. Hover goes ink with an ink underline. (Distinction is color-only, not opacity — opacity-dimmed gray text failed contrast and was fixed during polish.)
+- **Items:** Professional, Coursework, Projects, Personal (each scroll-spied against its section), plus the separately-styled Resume button. A `mailto:` contact link was tried here and moved instead — see the hero contact link below; a `mailto:` link in the nav is easy to mistake for broken since nothing visibly happens without a configured mail client, and it's also the one nav item that isn't tied to a page section a visitor is trying to reach.
+- **Overflow:** The desktop nav wraps (`flex-wrap: wrap`, right-aligned) rather than overflowing if a future item ever pushes total width past what the masthead can hold before the mobile breakpoint kicks in.
 - **Mobile:** Below 860px, the nav collapses behind a bordered "Menu" toggle button and opens as a full-width paper panel with left-aligned, horizontally-laid-out items.
 
 ### List Rows (timeline / project rows)
@@ -246,8 +249,8 @@ A signature recurring pattern: a small square ink dot, a title in Signal Blue, a
 ### Group Labels (coursework / skills)
 When a list or pill row would otherwise exceed ~4 items, split it into labeled sub-groups rather than leaving one long undifferentiated list. Each group gets a small muted uppercase label (`course-group__label` / `skill-group__label`, 11px, 0.1em tracking) above it, with 20px separating one group from the next. This is a chunking device, not a new visual role — it borrows the same Label treatment used everywhere else.
 
-### Image Placeholder (photo slots, hero headshot)
-The system's one repeated pattern for a real photo that doesn't exist yet: an off-white, 1px-ink-bordered, zero-radius box holding a centered uppercase Label ("01 — Pending", "Headshot – Pending"). Used identically for the Personal section's four photo slots and the hero headshot. No stock imagery, no icon standing in for a person — an honest gap reads better than a fake fill.
+### Photos (hero headshot, Personal grid)
+Real photos now fill both the hero (a 4:5 portrait crop, `object-fit: cover`, 1px ink border, no radius) and the Personal section's grid (five photos, 3:4 crop each, same border treatment, `overflow: hidden` on the slot). No placeholder is currently showing anywhere on the page. If a slot goes empty again in the future (a new grid position added before a photo exists for it, say), reuse the retired Image Placeholder pattern rather than inventing a new one: an off-white, 1px-ink-bordered, zero-radius box holding a centered uppercase Label ("05 — Pending"). No stock imagery, no icon standing in for a person — an honest gap reads better than a fake fill.
 
 ### Resume Embed (CTA section)
 An inline `<iframe>` showing the résumé PDF directly on the page, borderless — the PDF's own page edge reads as its boundary, no framing device needed. Sits below the CTA pills, so the download/mailto actions stay the primary path while the PDF itself is immediately viewable without a click. Deliberately breaks out of the CTA section's 720px text measure (up to 960px wide, full-viewport-width on narrow screens) since a résumé needs to actually be readable, not constrained to match paragraph width; height is driven by `aspect-ratio: 8.5 / 11` rather than a fixed pixel value, so the full page stays visible at any viewport width without internal scrolling. Where inline PDF rendering is less reliable (some mobile browsers), the "Download resume" pill above it remains the fallback.
@@ -270,7 +273,7 @@ An inline `<iframe>` showing the résumé PDF directly on the page, borderless �
 - **Don't** add drop shadows, gradients, or rounded corners anywhere — they contradict the flat ledger metaphor.
 - **Don't** introduce a fourth typeface, use IBM Plex Sans anywhere except the degree-banner names, or add Roboto to a new role without being explicitly asked — the mono-default-with-two-exceptions split is the system's current core identity, and Roboto's footprint has grown by individual request each time, not by a standing rule.
 - **Don't** box the degree entries back into separate bordered cards; the banner (one ruled band, one internal divider) is the current form.
-- **Don't** fill the empty photo-slot or headshot placeholders with stock imagery or invented content — leave them as honest off-white placeholders, labeled in-voice ("01 — Pending", "Headshot – Pending", in the Label role), until real photos exist.
+- **Don't** fill an empty photo slot or headshot placeholder with stock imagery or invented content — leave it as an honest off-white placeholder, labeled in-voice ("05 — Pending", in the Label role), until a real photo exists for it.
 - **Don't** put a kicker/eyebrow label above a heading; fold the qualifying detail into the heading text itself instead (e.g. "B.S. in Computer Science", not "Bachelor of Science" over "Computer Science").
 - **Don't** bold supporting/description copy as heavily as the title it supports; descriptions stay at regular weight in Body color so the Signal Blue title still leads.
 - **Don't** reach for a generic "AI portfolio" interaction (card hover-lift, glow, gradient shimmer, bounce) — every interactive moment must trace back to something already in the ledger's own visual vocabulary.
